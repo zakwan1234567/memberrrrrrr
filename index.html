@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grup Kreatif Nusantara</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="member.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== HERO SECTION ===== -->
+    <header class="hero">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Logo">
+            <h1>YS PRIDE</h1>
+            <p>Solid • Kreatif • Inovatif</p>
+            <a href="#member" class="btn">Lihat Member</a>
+        </div>
+    </header>
+
+    <!-- ===== MEMBER SECTION ===== -->
+    <section id="member">
+        <h2 class="title">Member Kami</h2>
+        <div class="members"></div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        © 2026 Grup Kreatif Nusantara
+    </footer>
+
+    <!-- ===== DATA MEMBER ===== -->
+    <script>
+        const members = [
+            ["ukki","Desain","Jl. pendidikan"],
+            ["Tings","Futsal","Jl. pendidikan"],
+            ["Dewa","Editing","Jl. lalomba"],
+            ["Dandi","Fotografi","Jl. sablam"],
+            ["caesar","Coding","Jl. sablam 5"],
+            ["Fajar","Game","Jl. wundulako 6"],
+            ["ainul","Musik","Jl. smbarangjidia 7"],
+            ["Hadi","Ngoding","Jl. sama ji inul 8"],
+            ["rivaldy","Desain","Jl. wndlko 9"],
+            ["haeiril","Vlog","Jl. tamanlaut 10"],
+            ["marvin","Editing","Jl. Cemara 11"],
+            
+        ];
+
+        const container = document.querySelector(".members");
+
+        members.forEach((m, i) => {
+            container.innerHTML += `
+                <div class="card fade">
+                    <img src="https://i.pravatar.cc/300?img=${i + 1}" alt="${m[0]}">
+                    <div class="content">
+                        <h3>${m[0]}</h3>
+                        <p><strong>Hobi:</strong> ${m[2]}</p>
+                        <p><strong>Alamat:</strong> ${m[3]}</p>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+
+    <!-- JS Animasi -->
+    <script src="member.js"></script>
+
+</body>
+</html>

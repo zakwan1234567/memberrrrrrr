@@ -1,0 +1,144 @@
+/* ===================== GLOBAL ===================== */
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f4f6fb;
+    color: #333;
+}
+
+/* ===================== HERO ===================== */
+.hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/featured/?technology,team") center / cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    animation: zoom 1s ease;
+}
+
+.hero img {
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.hero p {
+    opacity: 0.9;
+}
+
+/* ===================== BUTTON ===================== */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    background: #00e0ff;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* ===================== SECTION ===================== */
+section {
+    padding: 80px 8%;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+/* ===================== MEMBER ===================== */
+.members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card .content {
+    padding: 20px;
+}
+
+.card h3 {
+    margin: 0 0 8px;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111;
+    color: #aaa;
+}
+
+/* ===================== ANIMATION ===================== */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s ease;
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
